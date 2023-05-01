@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/news_navbar"
+        android:title="News"
+        android:iconTint="@color/gray"
+        android:icon="@drawable/ic_newspaper">
+    </item>
+
+    <item android:id="@+id/schedule_navbar"
+        android:title="Schedule"
+        android:iconTint="@color/gray"
+        android:icon="@drawable/ic_calendar">
+    </item>
+
+</menu>
