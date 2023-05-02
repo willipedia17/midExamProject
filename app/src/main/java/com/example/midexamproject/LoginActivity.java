@@ -23,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.edtEmail_login);
         pass = findViewById(R.id.edtPassword_login);
 
+        dbHelper = new DBHelper(this);
+
         loginBtn = findViewById(R.id.loginButton_login);
         loginBtn.setOnClickListener(e ->{
             if(email.getText().toString().isEmpty() || pass.getText().toString().isEmpty()){

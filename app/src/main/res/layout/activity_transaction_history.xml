@@ -6,16 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".TransactionHistory">
 
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/backButton_trans"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_back"
+            android:backgroundTint="@color/orange"
+            android:gravity="start" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="30dp"
         android:text="History"
         android:textColor="@color/orange"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11" />
 </androidx.constraintlayout.widget.ConstraintLayout>

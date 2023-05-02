@@ -9,10 +9,15 @@
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <android.widget.Button
-            android:id="@+id/backButton_login"
+            android:id="@+id/backButton_detail"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_margin="15dp"
@@ -22,36 +27,54 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/news_Image_detail"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <TextView
-        android:id="@+id/news_Title_detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="LeBron James ketahuan minum kecap manis sebelum tanding"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/news_Image_detail" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/news_Desc_detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="@string/lorem"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/news_Title_detail" />
+            <ImageView
+                android:id="@+id/news_Image_detail"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/news_Title_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:text="LeBron James ketahuan minum kecap manis sebelum tanding"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/news_date_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/news_Desc_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingHorizontal="25dp"
+                android:paddingBottom="100dp"
+                android:text="@string/lorem"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
