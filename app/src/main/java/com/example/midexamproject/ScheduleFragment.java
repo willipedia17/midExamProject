@@ -58,7 +58,7 @@ public class ScheduleFragment extends Fragment {
     private void dataInitialize() {
         scheduleData.add(
                 new ScheduleData
-                        ("Bina Kasih", "Xaverius 1", "2 Mei 2023", "7 PM", "Binus Hall Syahdan", R.drawable.teamlogobasket, R.drawable.binakasih));
+                        ("Night Wolf", "Bina Kasih", "2 Mei 2023", "7 PM", "Binus Hall Syahdan", R.drawable.teamlogobasket, R.drawable.binakasih));
     }
 
 }

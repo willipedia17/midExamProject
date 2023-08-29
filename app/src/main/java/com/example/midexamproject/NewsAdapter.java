@@ -19,7 +19,6 @@ import java.util.Vector;
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     Context ctx;
-
     static Vector<NewsData> news;
     static LinearLayout linearLayout;
 
@@ -45,6 +44,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.newsTitle.setText(newsData.newsTitle);
         holder.newsDate.setText(newsData.newsDate);
         holder.newsImg.setImageResource(newsData.newsImg);
+//        holder.title.setText("News");
 
         linearLayout.setOnClickListener(e->{
             Intent intent = new Intent(e.getContext(), NewsDetail.class);
@@ -69,13 +69,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView newsTitle, newsDate;
+        TextView newsTitle, newsDate, title;
         ImageView newsImg;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             linearLayout = itemView.findViewById(R.id.news_item);
+            title = itemView.findViewById(R.id.home_title);
             newsTitle = itemView.findViewById(R.id.news_title);
             newsDate = itemView.findViewById(R.id.news_date);
             newsImg = itemView.findViewById(R.id.news_Image);

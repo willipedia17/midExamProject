@@ -19,7 +19,7 @@ import java.util.Vector;
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHolder> {
     Context ctx;
     static Vector<ScheduleData> scheduleData;
-    LinearLayout linearLayout;
+    static LinearLayout linearLayout;
 
 
     public ScheduleAdapter(Context ctx, Vector<ScheduleData> schedule) {
@@ -42,11 +42,12 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
 
         holder.team1.setText(scheduleDatas.team1);
         holder.team2.setText(scheduleDatas.team2);
-//        holder.team1_img.setImageResource(scheduleDatas.team1_img);
-//        holder.team2_img.setImageResource(scheduleDatas.team2_img);
+        holder.team1_img.setImageResource(scheduleDatas.team1_img);
+        holder.team2_img.setImageResource(scheduleDatas.team2_img);
         holder.date.setText(scheduleDatas.date);
         holder.time.setText(scheduleDatas.time);
         holder.place.setText(scheduleDatas.place);
+//        holder.title.setText("Schedule");
 
         linearLayout.setOnClickListener(v ->{
             Intent intent = new Intent(v.getContext(), ScheduleDetail.class);
@@ -77,13 +78,14 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView team1, team2, date, time, place;
+        TextView team1, team2, date, time, place, title;
         ImageView team1_img, team2_img;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             linearLayout = itemView.findViewById(R.id.schedule_item);
+            title = itemView.findViewById(R.id.home_title);
             team1 = itemView.findViewById(R.id.Team1_schedule);
             team2 = itemView.findViewById(R.id.Team2_schedule);
             team1_img = itemView.findViewById(R.id.image_team1);

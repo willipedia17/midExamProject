@@ -21,7 +21,8 @@ public class ScheduleDetail extends AppCompatActivity {
     ImageView image1_view, image2_view;
 
     String team1, team2, date, time, place;
-    Integer team1_img, team2_img;
+    Integer team1_img;
+    Integer team2_img;
 
     Button backBtn;
 
@@ -34,7 +35,6 @@ public class ScheduleDetail extends AppCompatActivity {
         backBtn.setOnClickListener(v -> finish());
 
         scheduleAdapter = new ScheduleAdapter(this, scheduleDataVector);
-
         team1 = getIntent().getStringExtra("team1");
         team2 = getIntent().getStringExtra("team2");
         team1_img = getIntent().getIntExtra("team1_img", 0);
@@ -43,5 +43,22 @@ public class ScheduleDetail extends AppCompatActivity {
         time = getIntent().getStringExtra("time");
         place = getIntent().getStringExtra("place");
 
+        getIntent().removeExtra("team1");
+        getIntent().removeExtra("team2");
+        getIntent().removeExtra("team1_img");
+        getIntent().removeExtra("team2_img");
+        getIntent().removeExtra("date");
+        getIntent().removeExtra("time");
+        getIntent().removeExtra("place");
+
+        team1_view = findViewById(R.id.detail_Team1);
+        team2_view = findViewById(R.id.detail_Team2);
+        image1_view = findViewById(R.id.image_team1);
+        image2_view = findViewById(R.id.image_team2);
+
+        team1_view.setText(team1);
+        team2_view.setText(team2);
+        image1_view.setImageResource(team1_img);
+        image2_view.setImageResource(team2_img);
     }
 }
